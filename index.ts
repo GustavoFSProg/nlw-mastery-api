@@ -8,7 +8,7 @@ import dotenv from 'dotenv'
 const app = fastify()
 
 app.get('/', () => {
-  return  `🍰 Api Running: ${PORT}`})
+  return  `🍰 Api Running:`})
 
 
 app.listen({port: PORT, }).then(() =>
