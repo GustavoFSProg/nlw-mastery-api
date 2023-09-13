@@ -14,7 +14,7 @@ model Video {
   id            String   @id @default(uuid()) @map("_id")
   name          String
   path          String
-  transcription String?
+  transcription String?  @default("null")
   createdAt     DateTime @default(now())
 }
 
