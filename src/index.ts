@@ -20,7 +20,7 @@ app.get('/', () => {
     return prompts})
   
 
-app.listen({port: PORT, }).then(() =>
+app.listen({port: Number(PORT), }).then(() =>
 { console.log(  `🍰 Api Running: ${PORT}`)})
 
 export default app
