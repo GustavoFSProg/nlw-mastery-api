@@ -22,3 +22,5 @@ app.get('/', () => {
 
 app.listen({port: PORT, }).then(() =>
 { console.log(  `🍰 Api Running: ${PORT}`)})
+
+export default app
