@@ -14,10 +14,14 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@fastify/multipart": "^7.7.3",
     "@prisma/client": "5.3.0",
     "dotenv": "^16.3.1",
     "fastify": "^4.23.0",
+    "openai": "^4.7.0",
     "prisma": "4.0.0",
-    "sucrase": "^3.34.0"
+    "sucrase": "^3.34.0",
+    "zod": "^3.22.2"
   }
 }
