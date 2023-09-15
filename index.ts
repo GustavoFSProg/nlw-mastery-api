@@ -12,7 +12,7 @@ const { PORT } = process.env
 
 const app = fastify()
 
-app.register(fastifyCors)
+// app.register(fastifyCors)
 
 app.register(getAllPromptsRoute)
 app.register(uploadVideoRoute)
