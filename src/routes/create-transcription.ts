@@ -1,8 +1,8 @@
 import { openai } from "../lib/openai";
 import { FastifyInstance } from 'fastify'
-import { PrismaClient } from '@prisma/client'
 import { z } from 'zod'
 import { createReadStream } from "node:fs";
+import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
@@ -27,6 +27,8 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
       }
     })
 
+    console.log(video)
+
     
     const videoPath = video.path
     const audioReadStream = createReadStream(videoPath)
@@ -44,7 +46,7 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
 
     const transcription = response.text
 
-    await prisma.video.update({
+   await prisma.video.update({
       where: {
         id: videoId,
       },
@@ -53,8 +55,7 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
       }
     })
 
-    return {
-      transcription,
-    }
+    return transcription 
+    
   })
 }

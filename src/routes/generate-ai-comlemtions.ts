@@ -32,7 +32,7 @@ export async function generateAiCompletionRoute(app: FastifyInstance) {
         { role: 'user', content: promptMessage }
       ]
     })
-    
+
     return response
   })
 }
